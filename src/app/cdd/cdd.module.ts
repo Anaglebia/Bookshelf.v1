@@ -1,9 +1,17 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { CddRoutingModule } from './cdd-routing.module';
 import { ClassesComponent } from './classes/classes.component';
+import {MatButtonModule} from '@angular/material/button';
+
+
+
+
 
 
 @NgModule({
@@ -13,7 +21,11 @@ import { ClassesComponent } from './classes/classes.component';
   imports: [
     CommonModule,
     CddRoutingModule,
-    MatTableModule
+    MatTableModule,
+    MatCardModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
   ]
 })
 export class CddModule { }

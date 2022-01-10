@@ -11,7 +11,7 @@ export class ClassesComponent implements OnInit {
   //arrei de livros
   livrosGeneros:Generos[]=[
        {_idGeneros:"0", nomeGenero:"Generalidades", decimalGenero:"00 ", livrosGenero:423},
-       {_idGeneros:"1", nomeGenero:"Filosofia e pscoligia", decimalGenero:"00 ", livrosGenero:125},
+       {_idGeneros:"1", nomeGenero:"Filosofia e pscologia", decimalGenero:"00 ", livrosGenero:125},
        {_idGeneros:"2", nomeGenero:"Religião", decimalGenero:"00 ", livrosGenero:366},
        {_idGeneros:"3", nomeGenero:"Ciencias socias", decimalGenero:"00 ", livrosGenero:203},
        {_idGeneros:"4", nomeGenero:"Linguas", decimalGenero:"00 ", livrosGenero:123},
@@ -23,7 +23,7 @@ export class ClassesComponent implements OnInit {
 
   ];
 
-  //o que vai ser mostrado no
+  //o que vai ser mostrado na tabela
   visaoColunas =['_idGeneros','nomeGenero','decimalGenero']
 
   constructor() {
