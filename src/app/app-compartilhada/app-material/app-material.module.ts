@@ -5,16 +5,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
-
-
 @NgModule({
   exports:[
-  MatTableModule,
-  MatCardModule,
-  MatToolbarModule,
-  MatIconModule,
-  MatButtonModule,
-]
-
+    MatButtonModule,
+    MatCardModule,
+    MatIconModule,
+    MatTableModule,
+    MatToolbarModule
+  ]
 })
 export class AppMaterialModule { }
