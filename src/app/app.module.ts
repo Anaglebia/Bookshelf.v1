@@ -5,24 +5,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AppMaterialModule } from './compartilhada/app-material.module';
-import { AppDialogosComponent } from './app-compartilhada/app-dialogos/app-dialogos.component';
-import { PipesPipe } from './app-compartilhada/app-pipes/pipes.pipe';
-
+import { AppMaterialModule } from './app-compartilhada/app-material/app-material.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AppDialogosComponent,
-    PipesPipe
+    AppComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
-    AppMaterialModule,
-
+    AppMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
