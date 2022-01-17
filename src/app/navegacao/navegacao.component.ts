@@ -20,9 +20,9 @@ export class NavegacaoComponent {
   itensMenu = [
     {linkMenu:'/CDD', labelMenu:'Classes dewey', hab:true},
     {linkMenu:'/fedd', labelMenu:'Feed Noticias', hab:true},
-    {linkMenu:'/clube', labelMenu:'Pagina Usuario', hab:true},
-    {linkMenu:'/leitura', labelMenu:'Clubes de Leitura', hab:true},
-    {linkMenu:'/estante', labelMenu:'Estante Particular', hab:true},
+    {linkMenu:'/clube', labelMenu:'Pagina Usuario', hab:false},
+    {linkMenu:'/leitura', labelMenu:'Clubes de Leitura', hab:false},
+    {linkMenu:'/estante', labelMenu:'Estante Particular', hab:false},
   ]
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
