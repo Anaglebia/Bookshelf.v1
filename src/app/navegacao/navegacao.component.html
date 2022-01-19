@@ -1,35 +1,23 @@
 <mat-sidenav-container class="sidenav-container">
-  <mat-sidenav #drawer class="sidenav" fixedInViewport
-      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'"
-      [opened]="(isHandset$ | async) === false">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="(isHandset$ | async) === false">
     <mat-toolbar>{{tituloNav}}</mat-toolbar>
-<!-- <p>
-  <mat-icon aria-hidden="false"
-</p> -->
-    <mat-nav-list *ngFor="let itemMenu of itensMenu">
-      <a mat-list-item class="itemMenu.linkMenu"></a>
-
-      <a mat-list-item href="#">Link 1</a>
-      <a mat-list-item href="#">Link 2</a>
-      <a mat-list-item href="#">Link 3</a>
+    <mat-nav-list *ngFor="let itemMenu of itensMenu$ | async; index as i">
+      <a mat-list-item *ngIf="itemMenu.hab === true" [href]="itemMenu.linkMenu">{{itemMenu.labelMenu}}</a>
     </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
     <mat-toolbar color="primary">
-      <button
-        type="button"
-        aria-label="Toggle sidenav"
-        mat-icon-button
-        (click)="drawer.toggle()"
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()"
         *ngIf="isHandset$ | async">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        <mat-icon aria-label="Menu BookShelf Lateral">menu</mat-icon>
       </button>
-
-      <img mat-card-sm-image [width]="liIcone" [height]="alIcone" src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-      <span>{{tituloBarra}}</span>
+      <img mat-card-sm-image [width]="lIcone" [height]="aIcone" [src]="iconeGeral">
+      <button mat-raised-button color="primary">
+        <mat-icon class="mat-18">login</mat-icon>
+        LOGIN
+      </button>
     </mat-toolbar>
-    <!-- Add Content Here -->
     <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>

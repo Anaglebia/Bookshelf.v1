@@ -1,0 +1,9 @@
+[
+  {"linkMenu":"'/CDD'", "labelMenu":"'Classes dewey'", "hab":true},
+  {"linkMenu":"'/fedd'", "labelMenu":"'Feed Noticias'", "hab":true},
+  {"linkMenu":"'/clube'", "labelMenu":"'Pagina Usuario'"," hab":true},
+  {"linkMenu":"'/leitura'", "labelMenu":"'Clubes de Leitura'", "hab":false},
+  {"linkMenu":"'/estante'", "labelMenu":"'Estante Particular'", "hab":false}
+]
+
+

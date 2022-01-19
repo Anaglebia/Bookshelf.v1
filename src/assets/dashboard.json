@@ -1,0 +1,9 @@
+
+
+[
+    { "title": "'O melhor livro de janeiro'", "img": "../../assets/imagens/1.png", "cols": 1, "rows": 1 },
+    { "title": "'Dica dos Leitores'", "img": "'../../assets/imagens/2.png'", "cols": 1, "rows": 1 },
+    { "title": "'O mais comentado da semana'", "img": "'../../assets/imagens/3.png'"," cols": 1, "rows": 1 },
+    { "title": "'Indicação do time BookShelf'", "img": "'../../assets/imagens/4.png'", "cols": 1, "rows": 1 }
+  ]
+
