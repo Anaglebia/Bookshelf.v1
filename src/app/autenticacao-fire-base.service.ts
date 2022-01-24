@@ -6,7 +6,7 @@ import { from } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class AutenticacaoFireBaseService {
+export class AutenticacaoFirebaseService {
 
   constructor(
     private usuarioFb:Auth

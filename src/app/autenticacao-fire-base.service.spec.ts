@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { AutenticacaoFireBaseService } from './autenticacao-fire-base.service';
+import { AutenticacaoFirebaseService, AutenticacaoFirebaseService } from './autenticacao-fire-base.service';
 
-describe('AutenticacaoFireBaseService', () => {
-  let service: AutenticacaoFireBaseService;
+describe('AutenticacaoFirebaseService', () => {
+  let service: AutenticacaoFirebaseService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(AutenticacaoFireBaseService);
+    service = TestBed.inject(AutenticacaoFirebaseService);
   });
 
   it('should be created', () => {

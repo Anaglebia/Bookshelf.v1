@@ -1,12 +1,15 @@
 import { Injectable } from '@angular/core';
 import { Auth } from '@angular/fire/auth';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { from } from 'rxjs';
+import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from 'firebase/auth';
+import { authState } from 'rxfire/auth';
+import { from, switchMap } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AutenticacaoFirebaseService {
+
+  usuarioLogado$ = authState(this.usuarioFb);
 
   constructor(
     private usuarioFb: Auth
@@ -19,4 +22,11 @@ export class AutenticacaoFirebaseService {
     sairLogin(){
       return from(this.usuarioFb.signOut());
     }
+
+    cadastrarUsuario(nome: string, email: string, senha: string){
+      return from(createUserWithEmailAndPassword(this.usuarioFb, email, senha)).pipe(
+        switchMap(({user}) => updateProfile(user, {displayName: nome}))
+      )
+    }
 }
+
